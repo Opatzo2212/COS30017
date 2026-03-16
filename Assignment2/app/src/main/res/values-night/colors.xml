@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="toggle_circle_color">@color/discord_dark_gray</color>
+    <color name="toggle_icon_color">@color/white</color>
+</resources>

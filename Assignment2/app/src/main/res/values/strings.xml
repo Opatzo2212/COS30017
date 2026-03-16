@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Assignment 2</string>
+    <string name="rental_total_cost">Total Cost: %1$d Credits (%2$d Days)</string>
+    <string name="rental_cost_limit_exceeded">Total cost (%1$d) exceeds the 400 credit limit!</string>
+    <string name="insufficient_balance">Insufficient balance! Total cost: %1$d, Current Balance: %2$d</string>
+    <string name="rental_confirmed">Rental confirmed: %1$s for %2$d credits</string>
+    <string name="last_rented_status">Last Rented: %1$s %2$s</string>
+    <string name="prev">Prev</string>
+</resources>

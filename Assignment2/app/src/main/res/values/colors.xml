@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Discord-like Colors -->
+    <color name="discord_blurple">#5865F2</color>
+    <color name="discord_dark_gray">#313338</color>
+    <color name="discord_darker_gray">#2B2D31</color>
+    <color name="discord_black">#1E1F22</color>
+    <color name="discord_white">#F2F3F5</color>
+
+    <!-- Toggle Colors -->
+    <color name="toggle_circle_color">@color/white</color>
+    <color name="toggle_icon_color">@color/discord_blurple</color>
+</resources>

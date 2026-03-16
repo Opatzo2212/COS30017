@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Assignment2" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Discord-like dark theme -->
+        <item name="colorPrimary">@color/discord_blurple</item>
+        <item name="android:windowBackground">@color/discord_dark_gray</item>
+        <item name="colorSurface">@color/discord_darker_gray</item>
+        <item name="colorOnSurface">@color/discord_white</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <!-- Override Text Styles for Dark Mode -->
+    <style name="AppTextStyle.Heading" parent="android:Widget.TextView">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold|italic</item> <!-- Added Italic for Dark Mode -->
+        <item name="android:textColor">@color/discord_blurple</item> <!-- Blurple headings in dark mode -->
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="AppTextStyle.Details" parent="android:Widget.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/discord_white</item>
+        <item name="android:fontFamily">monospace</item> <!-- Monospace details in dark mode -->
+    </style>
+</resources>
