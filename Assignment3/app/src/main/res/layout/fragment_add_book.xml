@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1b2838"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivCover"
+        android:layout_width="140dp"
+        android:layout_height="200dp"
+        android:background="#212c3d"
+        android:padding="10dp"
+        android:src="@android:drawable/ic_menu_camera"
+        app:tint="#8f98a0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNovelName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="#212c3d"
+        android:hint="Novel Name"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="#8f98a0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivCover"
+        app:layout_constraintTop_toTopOf="@id/ivCover" />
+
+    <EditText
+        android:id="@+id/etAuthor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#212c3d"
+        android:hint="Author"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="#8f98a0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/etNovelName"
+        app:layout_constraintTop_toBottomOf="@id/etNovelName" />
+
+    <EditText
+        android:id="@+id/etTags"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#212c3d"
+        android:hint="Tags (e.g., Fantasy)"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="#8f98a0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/etAuthor"
+        app:layout_constraintTop_toBottomOf="@id/etAuthor" />
+
+    <EditText
+        android:id="@+id/etLink"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#212c3d"
+        android:hint="Link URL"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="#8f98a0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/etTags"
+        app:layout_constraintTop_toBottomOf="@id/etTags" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/topFieldsBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="ivCover,etLink" />
+
+    <LinearLayout
+        android:id="@+id/statusChapterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topFieldsBarrier">
+
+        <Spinner
+            android:id="@+id/spinnerStatus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="#212c3d"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/etChapter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="#212c3d"
+            android:hint="Current Chapter"
+            android:inputType="number"
+            android:padding="12dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="#8f98a0" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#212c3d"
+        android:gravity="top|start"
+        android:hint="Description"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="#8f98a0"
+        app:layout_constraintBottom_toTopOf="@id/bottomButtonLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusChapterLayout" />
+
+    <LinearLayout
+        android:id="@+id/bottomButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#36454F"
+            android:text="CANCEL"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#36454F"
+            android:text="SAVE NOVEL"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
